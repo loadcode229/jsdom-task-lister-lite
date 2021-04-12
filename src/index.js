@@ -31,8 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Remove Task
   function removeTask(e) {
+    // if event targets name === 'button/BUTTON/Button'
     if (e.target.nodeName === 'BUTTON') {
+      // confirmation of deletion
       if (confirm('Are you sure?')) {
+        // removes li (task) from taskList
         let li = e.target.parentElement;
         taskList.removeChild(li);
       }
